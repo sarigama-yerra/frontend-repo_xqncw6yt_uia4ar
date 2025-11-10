@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Showcase from './components/Showcase';
@@ -29,7 +28,7 @@ export default function App() {
       {/* Top nav */}
       <header className="fixed inset-x-0 top-0 z-50">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-5">
-          <a href="#top" className="font-semibold tracking-wide text-white">Flames Blue</a>
+          <a href="#top" className="font-semibold tracking-wide text-white">Klikdex</a>
           <nav className="hidden items-center gap-6 text-white/80 md:flex">
             <a href="#services" className="hover:text-white">Services</a>
             <a href="#contact" className="hover:text-white">Contact</a>

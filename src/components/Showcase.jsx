@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title: 'Aurora OS',
+    title: 'Solaris',
     tag: 'Design system & product website',
     img: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop',
   },
   {
-    title: 'Nocturne Labs',
+    title: 'Ember Labs',
     tag: 'Brand, site and launch visuals',
     img: 'https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1600&auto=format&fit=crop',
   },
@@ -18,7 +18,7 @@ const projects = [
     img: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1600&auto=format&fit=crop',
   },
   {
-    title: 'Halo Play',
+    title: 'Flux Play',
     tag: 'Interactive experience',
     img: 'https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1600&auto=format&fit=crop',
   },
@@ -36,11 +36,11 @@ function ProjectCard({ p, i }) {
     >
       <div className="relative aspect-[16/10] overflow-hidden">
         <img src={p.img} alt={p.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
       </div>
       <div className="absolute inset-0 flex items-end p-6">
         <div className="w-full">
-          <div className="h-px w-0 bg-gradient-to-r from-sky-400 to-indigo-500 transition-all duration-500 group-hover:w-full" />
+          <div className="h-px w-0 bg-gradient-to-r from-orange-400 to-rose-500 transition-all duration-500 group-hover:w-full" />
           <div className="mt-4 flex items-center justify-between">
             <div>
               <h3 className="text-lg font-semibold text-white">{p.title}</h3>
@@ -50,7 +50,7 @@ function ProjectCard({ p, i }) {
           </div>
         </div>
       </div>
-      <div className="pointer-events-none absolute -left-1/3 -top-1/3 h-40 w-40 rounded-full bg-sky-400/10 blur-2xl transition duration-500 group-hover:translate-x-6 group-hover:translate-y-6" />
+      <div className="pointer-events-none absolute -left-1/3 -top-1/3 h-40 w-40 rounded-full bg-orange-400/10 blur-2xl transition duration-500 group-hover:translate-x-6 group-hover:translate-y-6" />
     </motion.a>
   );
 }
@@ -68,9 +68,9 @@ export default function Showcase() {
         ))}
       </div>
       <div className="mt-10 text-center">
-        <a href="#contact" className="inline-block text-sky-300 transition hover:text-sky-200">
-          <span className="bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent">All Projects</span>
-          <span className="ml-2 inline-block h-px w-16 align-middle bg-gradient-to-r from-sky-400 to-indigo-500" />
+        <a href="#contact" className="inline-block text-orange-300 transition hover:text-orange-200">
+          <span className="bg-gradient-to-r from-orange-400 to-rose-500 bg-clip-text text-transparent">All Projects</span>
+          <span className="ml-2 inline-block h-px w-16 align-middle bg-gradient-to-r from-orange-400 to-rose-500" />
         </a>
       </div>
     </section>

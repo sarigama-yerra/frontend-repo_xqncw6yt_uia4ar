@@ -5,12 +5,12 @@ import Spline from '@splinetool/react-spline';
 const FloatingGlow = ({ delay = 0, className = '' }) => (
   <motion.div
     initial={{ opacity: 0, y: 20, scale: 0.9 }}
-    animate={{ opacity: 0.6, y: [0, -10, 0], scale: [1, 1.03, 1] }}
+    animate={{ opacity: 0.5, y: [0, -12, 0], scale: [1, 1.04, 1] }}
     transition={{ delay, duration: 8, repeat: Infinity, ease: 'easeInOut' }}
     className={`pointer-events-none absolute blur-2xl ${className}`}
     style={{
       background:
-        'radial-gradient(closest-side, rgba(56,189,248,0.35), rgba(99,102,241,0.18), rgba(0,0,0,0))',
+        'radial-gradient(closest-side, rgba(255,95,31,0.35), rgba(234,88,12,0.18), rgba(0,0,0,0))',
       filter: 'saturate(140%)',
     }}
   />
@@ -18,21 +18,21 @@ const FloatingGlow = ({ delay = 0, className = '' }) => (
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-black via-[#071229] to-[#0b1f3b]">
-      {/* 3D Spline Scene */}
+    <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-black via-[#0a0a0a] to-[#120c0a]">
+      {/* 3D Spline Scene as full-width cover */}
       <div className="absolute inset-0">
         <Spline
-          scene="https://prod.spline.design/4Zh-Q6DWWp5yPnQf/scene.splinecode"
+          scene="https://prod.spline.design/cEecEwR6Ehj4iT8T/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
-        {/* Soft vignette + gradient edge glow */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_70%_at_50%_10%,rgba(59,130,246,0.15),transparent)]" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#071229]/60" />
+        {/* Warm vignette + edge glow to match klikdex vibe */}
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_70%_at_50%_10%,rgba(255,99,33,0.2),transparent)]" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70" />
       </div>
 
-      {/* Floating glows (embers) */}
-      <FloatingGlow delay={0.2} className="left-[8%] top-[20%] h-56 w-56" />
-      <FloatingGlow delay={1.1} className="right-[10%] top-[35%] h-72 w-72" />
+      {/* Floating warm glows (embers) */}
+      <FloatingGlow delay={0.2} className="left-[8%] top-[22%] h-56 w-56" />
+      <FloatingGlow delay={1.1} className="right-[10%] top-[38%] h-72 w-72" />
       <FloatingGlow delay={0.6} className="left-[35%] bottom-[15%] h-64 w-64" />
 
       {/* Content */}
@@ -42,7 +42,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: 'easeOut' }}
           className="bg-gradient-to-b from-white via-white to-white/80 bg-clip-text text-4xl font-black tracking-tight text-transparent sm:text-6xl md:text-7xl"
-          style={{ textShadow: '0 0 30px rgba(56,189,248,0.25)' }}
+          style={{ textShadow: '0 0 30px rgba(255,115,55,0.25)' }}
         >
           We Create Digital Experiences That Inspire.
         </motion.h1>
@@ -63,10 +63,10 @@ export default function Hero() {
         >
           <a
             href="#services"
-            className="relative inline-flex items-center justify-center rounded-full px-7 py-3 text-base font-semibold text-white shadow-[0_0_30px_rgba(56,189,248,0.35)]"
+            className="relative inline-flex items-center justify-center rounded-full px-7 py-3 text-base font-semibold text-white shadow-[0_0_30px_rgba(255,115,55,0.35)]"
             style={{
               background:
-                'linear-gradient(135deg, rgba(59,130,246,0.95), rgba(99,102,241,0.95))',
+                'linear-gradient(135deg, rgba(255,115,55,0.95), rgba(234,88,12,0.95))',
             }}
           >
             <span className="relative z-10">Start Your Vision</span>
@@ -75,8 +75,8 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Subtle reflective floor */}
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-60 bg-gradient-to-t from-[#0ea5e9]/10 via-transparent to-transparent" />
+      {/* Subtle reflective floor in warm tone */}
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-60 bg-gradient-to-t from-orange-500/10 via-transparent to-transparent" />
     </section>
   );
 }

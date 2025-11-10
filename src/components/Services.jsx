@@ -35,16 +35,16 @@ function GlassCard({ title, Icon, desc, i }) {
       transition={{ duration: 0.6, delay: i * 0.06 }}
       className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl"
     >
-      <div className="pointer-events-none absolute -inset-px rounded-2xl opacity-60 [mask-image:radial-gradient(60%_60%_at_50%_0%,black,transparent)]" style={{background:'linear-gradient(180deg, rgba(59,130,246,0.25), rgba(99,102,241,0.15), transparent)'}} />
+      <div className="pointer-events-none absolute -inset-px rounded-2xl opacity-60 [mask-image:radial-gradient(60%_60%_at_50%_0%,black,transparent)]" style={{background:'linear-gradient(180deg, rgba(234,88,12,0.25), rgba(244,63,94,0.15), transparent)'}} />
       <div className="relative z-10">
-        <div className="mb-4 inline-flex rounded-xl bg-gradient-to-br from-sky-400/20 to-indigo-500/20 p-3 ring-1 ring-white/10">
-          <Icon className="h-6 w-6 text-sky-300 drop-shadow-[0_0_12px_rgba(56,189,248,0.7)]" />
+        <div className="mb-4 inline-flex rounded-xl bg-gradient-to-br from-orange-400/20 to-rose-500/20 p-3 ring-1 ring-white/10">
+          <Icon className="h-6 w-6 text-orange-300 drop-shadow-[0_0_12px_rgba(251,146,60,0.7)]" />
         </div>
         <h3 className="text-xl font-semibold text-white">{title}</h3>
         <p className="mt-2 text-sm leading-relaxed text-white/70">{desc}</p>
       </div>
       <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-        <div className="pointer-events-none absolute -inset-20 bg-[radial-gradient(120px_120px_at_var(--x,50%)_var(--y,50%),rgba(56,189,248,0.15),transparent)]" />
+        <div className="pointer-events-none absolute -inset-20 bg-[radial-gradient(120px_120px_at_var(--x,50%)_var(--y,50%),rgba(251,146,60,0.15),transparent)]" />
       </div>
     </motion.div>
   );
